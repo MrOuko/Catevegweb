@@ -26,18 +26,6 @@ body {
     margin: 0;
 }
 
-.background{
-    background-image: url('../Assets/Factoryimg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    filter: blur(3px);
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
 #main{
     overflow: auto;
     padding-bottom: 100px;
@@ -48,6 +36,14 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-bg-color);
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
     
 }
 
@@ -92,11 +88,14 @@ footer{
 /*end footer*/
 
 /*divs and sections*/
-.welcometxt {
-    position: absolute;
+.hero {
+    position: relative;
     z-index: 1;
     padding: 10%;
     color: var(--primary-text-color);
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
 }
 
 .btn{
@@ -128,6 +127,23 @@ footer{
  color: var(--primary-text-color);
 }
 /*divs and sections*/
+/*images*/
+.factory-image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+    top: 0;
+    left: 0;
+    filter: blur(1.3px);
+}
+
+
+
+
+/*images*/
 
 /*hover-effects*/
 /*navbar-fx*/
