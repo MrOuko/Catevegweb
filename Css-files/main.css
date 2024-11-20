@@ -7,13 +7,14 @@
  box-sizing: border-box;
  margin: 0;
  padding: 0;
- text-decoration: none;
+
 }
 
 :root{
     --primary-bg-color:  rgb(2, 88, 153);
     --primary-text-color: rgb(255, 255, 255);
     --Secondary-text-color: #33333390;
+    --div-color:rgb(2, 88, 153,0.9);
 }
 /*end asterisk*/
 
@@ -36,7 +37,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-bg-color);
-    z-index: 1000;
+    z-index: 9999;
     position: sticky;
     width: 100%;
     height: 40px;
@@ -52,13 +53,15 @@ body {
 .nav-links li{
     display: inline-block;
     font-size: .7rem;
-    padding: 3px;
+    margin-right: 13px;
 
 }
 .nav-links a, .fa-solid{
     color: white;
     cursor: pointer;
     position: relative;
+    text-decoration: none;
+    padding: 4px;
 }
 .cntc-btn {
     margin-right: 3px;
@@ -96,7 +99,7 @@ footer{
     padding: 10%;
     color: var(--primary-text-color);
     width: 100%;
-    height: 400px;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -127,6 +130,7 @@ footer{
 }
 .btnsection a{
  color: var(--primary-text-color);
+ text-decoration: none;
 }
 /*divs and sections*/
 /*images*/
@@ -149,8 +153,21 @@ footer{
 
 /*hover-effects*/
 /*navbar-fx*/
+.nav-links a::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
 
-
+.nav-links a:hover:after{
+    width: 100%;
+}
 /*navbar-fx*/
 /*end hover-effects*/
 
@@ -172,17 +189,71 @@ transition: transform 0.5s ease-in-out;
 /*icon-animations*/
 
 /*@keyframes of all*/
-@keyframes bounce {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-}
 @keyframes cursor{
     50% {border-color: transparent;}
 }
 @keyframes typing {
     from {width: 0;}
+}
+.section-div-left{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--Secondary-text-color);
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    height: 320px;
+}
+.section-div-left .content{
+    font-size: .65rem;
+    color: var(--primary-text-color);
+    padding: 1rem;
+    background-color: var(--div-color);
+    width: 45%;
+}
+
+
+.section-div-left img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    object-position: center;
+    filter: blur(1px);
+
+}
+
+.aboutsct{
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+    height: 120px;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    
+}
+#abouttxt{
+    text-decoration: underline;
+    color: #333;
+    opacity: .75;
+    font-size: .7rem;
+}
+
+.aboutsct p{
+    font-size: .1.2rem;
+    font-weight: bold;
+    opacity: .8;
+}
+.about-us .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    line-height: 1rem;
+}
+hr{
+    border: 2px solid var(--div-color);
 }
