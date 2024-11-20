@@ -1,6 +1,6 @@
 /*comments*/
 
-/*asterisk*/
+/*asterisk & root*/
 *,
  *::before,
  *::after {
@@ -8,6 +8,12 @@
  margin: 0;
  padding: 0;
  text-decoration: none;
+}
+
+:root{
+    --primary-bg-color:  rgb(2, 88, 153);
+    --primary-text-color: rgb(255, 255, 255);
+    --Secondary-text-color: #33333390;
 }
 /*end asterisk*/
 
@@ -41,20 +47,26 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--primary-bg-color);
     
 }
 
 .nav-links li{
     display: inline-block;
-    font-size: .8rem;
+    font-size: .7rem;
     padding: 3px;
+    position: relative;
 }
 .nav-links a, .fa-solid{
     color: white;
     cursor: pointer;
+    position: relative;
 }
 .cntc-btn {
     margin-right: 3px;
+}
+.logo{
+ color:var(--primary-text-color);
 }
 /*end navbar*/
 
@@ -63,6 +75,7 @@ footer{
     background-color: #7a8872;
     padding: 1rem;
     z-index: -1;
+    display: none;
 }
 .footworks{
     display: flex;
@@ -82,10 +95,76 @@ footer{
 .welcometxt {
     position: absolute;
     z-index: 1;
-    padding: 20%;
+    padding: 10%;
+    color: var(--primary-text-color);
+}
+
+.btn{
+    font-size: .8rem;
+    padding: 5px;
+    background-color: var(--primary-bg-color);
     color: white;
+    border-radius: 8px;
+    border-color: white;
+}
+/*texts*/
+.mission{
+    color: #33333390;
+    font-size: .8rem;
+    
+}
+.typewriter-fx{
+    display: inline-block;
+}
+.typewriter {
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(41),
+    cursor .4s step-end infinite alternate;
+}
+.btnsection a{
+ color: var(--primary-text-color);
 }
 /*divs and sections*/
-/*hover-effects*/
 
+/*hover-effects*/
+/*navbar-fx*/
+
+
+/*navbar-fx*/
 /*end hover-effects*/
+
+/*icon-animations*/
+.fa-gear{
+    transition: transform 0.5s ease-in-out;
+}
+
+.fa-house{
+    transition:0.5s ease-in-out;
+}
+.navbar .nav-links a:hover + .fa-gear {
+transform: rotate(360deg);
+transition: transform 0.5s ease-in-out;
+}
+.navbar .navlinks .home:hover + .fa-house{
+    animation: bounce 0.5s ease-in-out;
+}
+/*icon-animations*/
+
+/*@keyframes of all*/
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+@keyframes cursor{
+    50% {border-color: transparent;}
+}
+@keyframes typing {
+    from {width: 0;}
+}
