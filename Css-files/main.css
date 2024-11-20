@@ -37,21 +37,23 @@ body {
     align-items: center;
     background-color: var(--primary-bg-color);
     z-index: 1000;
-    position: fixed;
+    position: sticky;
     width: 100%;
-    height: 60px;
+    height: 40px;
     padding: 0;
     margin: 0;
     top: 0;
     bottom: 0;
     
 }
-
+.nav-links{
+    margin-left: 8px;
+}
 .nav-links li{
     display: inline-block;
     font-size: .7rem;
     padding: 3px;
-    position: relative;
+
 }
 .nav-links a, .fa-solid{
     color: white;
@@ -100,11 +102,11 @@ footer{
 
 .btn{
     font-size: .8rem;
-    padding: 5px;
+    padding: 10px;
     background-color: var(--primary-bg-color);
     color: white;
     border-radius: 8px;
-    border-color: white;
+    border:none;
 }
 /*texts*/
 .mission{
