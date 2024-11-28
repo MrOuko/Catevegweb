@@ -1,0 +1,32 @@
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Assets/Factoryimg.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero .txt-content{
+position: absolute;
+top: 40%;
+}
+.txt-content h1{
+    font-size: .6rem;
+    color: #333;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.txt-content p{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
